@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN"
+    "http://getahead.org/dwr/dwr20.dtd">
+
+<dwr>
+  <allow>
+    <!--say  hello -->
+    <create creator="new" javascript="Hello">
+      <param name="class" value="cn.windy.dwr.Hello"/>
+    </create>
+    <!-- 集合 -->
+    <create creator="new" javascript="mycol">
+      <param name="class" value="cn.windy.dwr.Collections"/>
+    </create>
+    <!-- 级联下拉菜单-->
+    <create creator="new" javascript="selectMenu">
+      <param name="class" value="cn.windy.dwr.select.SelectMenu"/>
+    </create>
+      <convert converter="bean" match="cn.windy.dwr.select.Person"/>
+      <convert converter="bean" match="cn.windy.dwr.select.Org"/>
+  </allow>
+</dwr>
